@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="javascript.js">
+    </head>  
+<body>
+ <p class="P5">
+    <img src="pen and book2.jpg" width="250" height="160">
+    REGISTRATION
+    <img src="pen.JPG" width="250" height="160">
+  </p>
+  <hr style="width: 80%;">
+
+  <form class="form2">
+    <table>
+
+      <!-- Pupil's Information -->
+      <tr>
+        <td colspan="3">
+          <h2 style="margin-bottom: 20px; color: orangered; font: 1em sans-serif;">TEACHER'S INFORMATION</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Name</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <input type="text" id="Address" name="Address" pattern="[a-zA-Z0-9\s]+" title="Only Letters and numbers are allowed" placeholder="Address" required><br><br>
+        </td>
+      </tr>
+      
+        <tr>
+          <td>Nationality</td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <select id="country" name="country" onfocus="populateCountries()"></select><br><br>
+          </td>
+        </tr>
+      
+      <tr>
+        <td>Date of Birth</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td> 
+          <input type="date" id="DOB" name="DOB" placeholder="DOB" required><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td> 
+          <input type="email" id="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Enter a valid email Address including the @" required><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="Gender">Gender</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          Female:<input type="radio" name="gender">
+          Male:<input type="radio" name="gender">
+          Others:<input type="radio" name="gender"><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <input type="tel" id="numberInput" oninput="this.value=this.value.replace(/[^0-9]/g,'');" name="Contact" pattern="[0-9]{9}" value="+260" required><br><br>
+        </td>
+      </tr>
+
+     
+         <tr>
+          <td>
+            <button class="button3"  onclick="window.location.href='Student.html'">submit</button>
+          </td>
+         </tr>
+    </table>
+  </form>
+  <script>
+    // JavaScript function to populate the country dropdown
+    function populateCountries() {
+      // Get the select element
+      var countrySelect = document.getElementById('country');
+  
+      // Clear existing options
+      countrySelect.innerHTML = '';
+  
+      // Add default option
+      var defaultOption = document.createElement('option');
+      defaultOption.text = 'Select a country';
+      countrySelect.add(defaultOption);
+  
+      // Fetch list of countries from Restcountries API
+      fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(data => {
+          // Sort countries alphabetically
+          data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  
+          // Add countries to the dropdown
+          data.forEach(country => {
+            var option = document.createElement('option');
+            option.value = country.name.common;
+            option.text = country.name.common;
+            countrySelect.add(option);
+          });
+        })
+        .catch(error => console.error('Error fetching countries:', error));
+    }
+  </script>
+</body>

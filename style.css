@@ -1,0 +1,251 @@
+
+.header-content{
+    display: inline-block;
+    position: relative;
+}
+header img,
+h1{ display: inline-block;
+    vertical-align:text-bottom;
+    margin-right: 5px;
+
+}
+header img{
+    margin-right: 2px;
+    
+}
+h1::first-line{
+    content: "Mysch";
+    color: orangered;
+    font: 1em sans-serif;
+    margin-left: 4px;
+   
+    }
+h1::after{
+    content: "Master" ;
+    color: aqua;
+    font: 1em sans-serif;
+}
+.P1{
+    font: 1em sans-serif;
+    font-size: 0.50em;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    left: 124px;
+  
+}
+.Line{
+    width: 78.3%;
+    font-weight:15%;
+}
+.P2{
+    color: orangered;
+    font: 1em sans-serif;
+    font-size: medium;
+    text-align: center;
+    margin-top: 09%;
+}
+.P3{
+    margin-top: 2px;
+}
+.P4{
+    margin-top: -1px;
+    color: orangered;
+}
+.P5{
+    margin-top: 2%;
+    color: orangered;
+    text-align: center;
+    font-size: xx-large;
+}
+.lockpic{
+    margin-top: -5.01%;
+    width: 150px;
+    height: 170px;
+    margin-left: 30%;
+    position: absolute;
+}
+.button3{
+    margin-left: 120%;
+    background-color: orangered;
+    color: white;
+    border: none;
+    height: 20px;
+    border-radius: 4px;
+
+}
+.TeacherB{
+    margin-left: 4px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    height: 20px;
+    border-radius: 4px;
+}
+.PupilB{
+    margin-left: 4px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    height: 20px;
+    border-radius: 4px;
+}
+.button-1{
+    background-color: orangered;
+    color: white;
+    border: none;
+    height: 20px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+.form2{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 8%;
+   
+}
+.Gender{
+    display: inline-block;
+    margin-right: 20px;
+}
+.PUPIL{ 
+    
+     color: blue;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: orangered;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: aqua;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+
+.line2{
+    margin-top: -0.59%;
+    background-color:orangered;
+    width: 100%;
+}
+.Body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+   background-color:none;
+   color: #333;
+   font-family: Arial;
+   font-size: 16px;
+   line-height: 1.4;
+   font-weight: 100;
+   letter-spacing: 0.5px;
+
+   
+}
+.Motion{
+   margin: 0;
+   opacity: 0;
+   transform: translateY(20px);
+   animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp{
+   to {
+    opacity: 1;
+    transform: translateY(0);
+   }
+}
+.Motion.vision {
+    animation-delay:  0.8s;
+}
+h2{
+    color: orangered;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 3%;
+
+}
+.h2-headings{
+    top: 8%;
+}
+.hr{
+    margin-top: -0.1%;
+   
+}
+.button-fetch{
+    background-color: orangered;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+.attendance {
+    text-align: center;
+}
+
+.Class-Monitor {
+    margin: 0;    font: 2em sans-serif; /* Increase the font size */
+}
+
+.Class-Monitor::first-line {
+    content: "Class"; 
+    margin-left: 5px;
+    color:orangered ;
+}
+
+.Class-Monitor::after {
+    content: " Monitor";
+    color: orangered;
+}
+
+.Btns {
+    font: 1em sans-serif; /* Set the font size for buttons */
+    /* Add other button styles as needed */
+}
+
+/* Add other styles as needed */
+
+.result-table th {
+    border: 1px solid black;
+    
+}

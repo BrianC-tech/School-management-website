@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+           <img src="pic1.jpg" width="50" height="70">
+           <h1>MySch</h1>
+           <p class="P1">Pre,Primary And Secondary School Management System. </p>
+        </div><hr class="Line">
+   </header>
+   
+  <form action="forget_password">
+    
+    <tr>
+        <td>Enter Special No</td>
+        <td>
+            <input type="tel" id="numberInput" oninput="this.value=this.value.replace(/[^0-9]/g,'');"placeholder="Special No"><br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter New password</td>
+        <td>
+            <input type="password" id="passwordInput"minlength="6" placeholder="password" required><br><br>
+        </td>
+    </tr> 
+    <tr>
+        <td>Confirm New password</td>
+        <td>
+            <input type="password" id="passwordInput"minlength="6" placeholder="password" required>
+        </td>
+    </tr>
+  </form>
+</body>
+</html>

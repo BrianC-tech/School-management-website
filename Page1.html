@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>www.myschmaster.ac.zm/title</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="javascript" href="javascript.js">
+    </head>
+    <body>
+        <header>
+             <div class="header-content">
+                <img src="pic1.jpg" width="50" height="70">
+                <h1>MySch</h1>
+                <p class="P1">Pre,Primary And Secondary School Management System. </p>
+             </div><hr class="Line">
+        </header>
+        <form action="login.php" method="post">
+            
+            <table style="margin-left: auto; margin-right: auto;">
+                <p class="P2"> User Login</p>
+                <tr>
+                    <img src="lockpic.jpg" class="lockpic">
+                    <td>
+                        <input type="tel" id="numberInput" oninput="this.value=this.value.replace(/[^0-9]/g,'');"placeholder="Special No"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" id="passwordInput"minlength="6" placeholder="password" required>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                       <p class="P3"><input type="checkbox" id="Remember me" >Remember me</p>
+                       <button class="button-1" onclick="window.location.href='Student.html'" >Login</button>
+                    </td><br>
+                    
+                   
+                    
+               </tr>
+               <tr>
+                    <td>
+                        <div>
+                            Register as <br><br>
+                            <button   class="TeacherB" onclick="window.location.href='RegisterT.html'">Teacher</button><button class="PupilB" onclick="window.location.href='RegisterP.html'">Pupil</button>
+
+                        </div><br>
+                        <p class="P4"><a href="Forget.html" style="color: red;">Forgot Password</a></p>
+                    </td>
+                   
+                    
+
+                
+              
+
+            </table>
+           
+        </form>
+    </body>
+</html>

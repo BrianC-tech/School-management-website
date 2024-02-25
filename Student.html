@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="javascript.js">
+    </head>
+      <header>
+            <div class="header-content">
+              <img src="pic1.jpg" width="50" height="70">
+              <h1>MySch</h1>
+              <p class="P1">Pre,Primary And Secondary School Management System. </p>
+            </div><hr class="Line">
+      </header>
+   
+    <body>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="About.html">About</a>
+        <a href="#">Registration</a>
+        <a href="#" onclick="toggleAcademicSubMenu()">Academic</a>
+        <div id="academicSubMenu" style="display: none; padding-left: 20px;">
+          <a href="#">Class work</a>
+          <a href="ExamResults.html">Exam Results</a>
+        </div>
+        <a href="#"onclick="toggleMoreSubMenu()">More</a>
+        <div id="moreSubMenu" style="display: none; padding-left: 20px;">
+          <a href="#">Rules</a>
+          <a href="#">Calender</a>
+          <a href="#">Announcement</a>
+          </div>
+        </div>
+      </div>
+      
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;👈</span>
+      <hr class="hr">
+      
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+      
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      
+        function toggleAcademicSubMenu() {
+          var subMenu = document.getElementById("academicSubMenu");
+          subMenu.style.display = (subMenu.style.display === "none" || subMenu.style.display === "") ? "block" : "none";
+        }
+        function toggleMoreSubMenu() {
+          var subMenu = document.getElementById("moreSubMenu");
+          subMenu.style.display = (subMenu.style.display === "none" || subMenu.style.display === "") ? "block" : "none";
+        }
+      </script>
+</body>
+</html>

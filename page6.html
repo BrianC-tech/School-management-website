@@ -1,0 +1,129 @@
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>attendance</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <img src="pic1.jpg" width="50" height="70">
+                <h1>MySch</h1>
+                <p class="P1">Pre, Primary, And Secondary School Management System.</p>
+            </div>
+            <hr class="Line">
+        </header>
+        
+        <div class="attendance">
+            <h1 class="Class-Monitor">Class</h1><br><br><br><br>
+            <button class="Btns" id="recordBtn">Record Attendance</button> 
+            <button class="Btns" id="generateReportBtn">Generate Report</button><br><br><br>
+            <textarea  id="AttendanceReport" placeholder="Attendance Report">Record Attendance</textarea><br><br><br>
+            <button  class="Btns" id="submitBtn">Submit</button>
+
+
+
+
+        </div>
+    </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .attendance {
+            text-align: center;
+        }
+
+        .Btns {
+            font: 1em sans-serif;
+        }
+
+        #attendanceTable {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        #attendanceTable th, #attendanceTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #attendanceTable th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the custom checkbox */
+        .custom-checkbox {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .custom-checkbox.checked {
+            background-color: #4CAF50; /* Color for tick */
+        }
+
+        .custom-checkbox.crossed {
+            background-color: #D9534F; /* Color for cross */
+        }
+    </style>
+    <title>Attendance System</title>
+</head>
+<body>
+    <div class="attendance">
+        <h1 class="Class-Monitor">Class</h1>
+        <br><br><br><br>
+        <button class="Btns" id="recordBtn" onclick="showAttendanceTable()">Record Attendance</button>
+        <br><br><br>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceBody">
+                <!-- Existing rows go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function showAttendanceTable() {
+            document.getElementById('attendanceTable').style.display = 'block';
+            createStudentRows(); // Call a function to create student rows
+        }
+
+        function createStudentRows() {
+            var students = ["Student 1", "Student 2", "Student 3"]; // Add more students as needed
+            var tableBody = document.getElementById('attendanceBody');
+
+            students.forEach(function(student) {
+                var newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${student}</td>
+                    <td><div class="custom-checkbox" onclick="toggleCheckbox(this)"></div></td>
+                `;
+                tableBody.appendChild(newRow);
+            });
+        }
+
+        function toggleCheckbox(checkbox) {
+            checkbox.classList.toggle('checked');
+            checkbox.classList.toggle('crossed');
+        }
+    </script>
+</body>
+</html>
+

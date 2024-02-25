@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam-Results</title>
+    </head>
+    <header>
+        <div class="header-content">
+        <img src="pic1.jpg" width="50" height="70">
+        <h1>MySch</h1>
+        <p class="P1">Pre,Primary And Secondary School Management System. </p>
+        </div><hr class="Line">
+    </header>
+    <body>
+        
+      <form id="resultForm">
+            <table>
+                    <tr>
+                        <td> <label for="studentId">Select Student's Grade:</label></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <select id="studentId" name="studentId">
+                                <option value="2">Grade 7</option>
+                                <option value="2">Grade 8</option>
+                                <option value="2">Grade 9</option>
+                                <option value="2">Grade 10</option>
+                                <option value="2">Grade 11</option>
+                                <option value="2">Grade 12</option>
+                            </select><br><br>
+                        </td> 
+                    </tr>
+                    
+                    <tr>
+                            <td><label for="examSeries">Select Exam Series:</label></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td> 
+                                <select id="examSeries" name="examSeries">
+                                    <option value="Monthly">Monthly Test</option>
+                                    <option value="Midterm">Midterm</option>
+                                    <option value="Finals">Finals</option>
+                                </select>
+
+                                <button class="button-fetch" onclick="viewResults()" >Fetch</button>
+                           </td>
+                        
+                    </tr>
+                   <!--
+                    <tr>
+                        <td></td>
+                        <td>
+                            <table class="result-table" >
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Mid-term %</th>
+                                    <th>Class Ave</th>
+                                    <th>End Of Term %</th>
+                                    <th>Class Ave</th>
+                                    <th>Grade</th>
+                                    <th>Teacher's Comment</th>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>78</td>
+                                    <td>64</td>
+                                    <td>2</td>
+                                    <td>Distinction</td>
+                                </tr>
+                                <tr> 
+                                    <td>Literature</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>78</td>
+                                    <td>64</td>
+                                    <td>1</td>
+                                    <td>Distinction</td>
+                                </tr>
+                                <tr>
+                                    <td>Religious</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>78</td>
+                                    <td>64</td>
+                                    <td>2</td>
+                                    <td>Distinction</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td>34</td>
+                                    <td>61</td>
+                                    <td>78</td>
+                                    <td>64</td>
+                                    <td>2</td>
+                                    <td>Distinction</td>
+            
+                                </tr>
+                                <tr>
+                                    <td>john</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>john</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>john</td>
+                                    <td>34</td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+
+                    </tr>
+                    -->
+           </table>
+      </form>
+      
+    </body>
+    
+</html>
